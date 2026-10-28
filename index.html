@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Food Go — delicious food delivered to your doorstep." />
+  <title>Food Go | Food Delivery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#home" aria-label="Food Go home"><span class="logo-mark">F</span> food<span>go</span></a>
+    <button class="mobile-menu" id="mobileMenu" aria-label="Toggle navigation">☰</button>
+    <nav id="mainNav">
+      <a class="active" href="#home">Home</a><a href="#menu">Menu</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions"><button class="text-button" data-page="login">Login</button><button class="cart-button" id="cartOpen">🛒 <span>Cart</span><b id="cartCount">0</b></button></div>
+  </header>
+
+  <main id="home">
+    <section class="hero section-wrap">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="pulse"></span> FRESH • FAST • DELICIOUS</span>
+        <h1>Delicious Food,<br>Delivered to Your <em>Doorstep.</em></h1>
+        <p>Cravings don’t wait. Discover your favorites, order in seconds, and enjoy fresh, delicious food delivered right to you.</p>
+        <div class="hero-buttons"><a class="btn btn-primary" href="#menu">Order Now <span>↗</span></a><a class="play-link" href="#services"><span class="play-icon">▶</span> How it works</a></div>
+        <div class="hero-stats"><div><strong>4.8<span>★</span></strong><small>Customer rating</small></div><div><strong>30<span> min</span></strong><small>Average delivery</small></div><div><strong>100<span>+</span></strong><small>Food choices</small></div></div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-glow"></div>
+        <img class="hero-food" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1000&q=85" alt="Delicious cheeseburger with fresh toppings">
+        <div class="floating-tag tag-top"><span class="tag-emoji">🔥</span><div><strong>Hot & fresh</strong><small>Made just for you</small></div></div>
+        <div class="floating-tag tag-bottom"><span class="mini-avatar">👨‍🍳</span><div><strong>Top rated chef</strong><small>Cooking with love</small></div><span class="stars">★★★★★</span></div>
+        <span class="decor decor-one">✦</span><span class="decor decor-two">✳</span>
+      </div>
+    </section>
+
+    <section class="section-wrap categories-section">
+      <div class="section-heading"><div><span class="eyebrow">WHAT ARE YOU CRAVING?</span><h2>Explore <em>categories</em></h2></div><a class="link-arrow" href="#menu">View full menu ↗</a></div>
+      <div class="category-list" id="categoryList">
+        <button class="category-chip selected" data-category="All"><span>🍽️</span> All food</button>
+        <button class="category-chip" data-category="Pizza"><span>🍕</span> Pizza</button>
+        <button class="category-chip" data-category="Burgers"><span>🍔</span> Burgers</button>
+        <button class="category-chip" data-category="Indian Food"><span>🍛</span> Indian food</button>
+        <button class="category-chip" data-category="Chinese"><span>🥡</span> Chinese</button>
+        <button class="category-chip" data-category="South Indian"><span>🥞</span> South Indian</button>
+        <button class="category-chip" data-category="Desserts"><span>🍰</span> Desserts</button>
+        <button class="category-chip" data-category="Drinks"><span>🥤</span> Drinks</button>
+      </div>
+    </section>
+
+    <section class="section-wrap menu-section" id="menu">
+      <div class="section-heading"><div><span class="eyebrow">OUR CUSTOMER FAVORITES</span><h2>Popular <em>dishes</em></h2></div><div class="menu-tools"><label class="search-box">⌕ <input id="searchInput" type="search" placeholder="Search your favorite..." aria-label="Search food"></label><label class="veg-filter"><input id="vegOnly" type="checkbox"> Veg only</label></div></div>
+      <div class="food-grid" id="foodGrid"></div>
+      <p id="emptyMessage" class="empty-message hidden">No dishes found. Try another search or category.</p>
+      <div class="center-action"><button class="btn btn-outline" id="showAll">Explore all dishes <span>↗</span></button></div>
+    </section>
+
+    <section class="offer-wrap section-wrap">
+      <div class="offer-banner"><div class="offer-copy"><span class="eyebrow">A LITTLE TREAT FOR YOU</span><h2>Good food. <em>Great mood.</em><br>Extra savings.</h2><p>Get 20% off your first order with code <strong>FOODGO20</strong>.</p><a href="#menu" class="btn btn-light">Order & save ↗</a></div><div class="offer-art"><img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=800&q=85" alt="Burger and fries meal"><span class="discount-sticker">20%<small>OFF</small></span></div></div>
+    </section>
+
+    <section class="section-wrap services-section" id="services">
+      <div class="section-heading centered"><div><span class="eyebrow">WHY FOOD GO?</span><h2>Made for your <em>happiness</em></h2><p class="section-subtitle">From the first click to the last bite, we make food ordering feel effortless.</p></div></div>
+      <div class="benefit-grid"><article class="benefit-card"><span class="benefit-icon">⚡</span><h3>Quick delivery</h3><p>Hot meals delivered fast, so you spend less time waiting and more time enjoying.</p></article><article class="benefit-card"><span class="benefit-icon">🥬</span><h3>Fresh ingredients</h3><p>Quality ingredients and carefully prepared dishes, every time you order.</p></article><article class="benefit-card"><span class="benefit-icon">♡</span><h3>Made with care</h3><p>Thoughtful service, delicious choices, and a little extra joy in every bite.</p></article></div>
+    </section>
+
+    <section class="about-section" id="about"><div class="section-wrap about-grid"><div class="about-image"><img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1000&q=85" alt="Warm restaurant dining atmosphere"><span class="about-sticker">Good food<br><strong>Good times.</strong></span></div><div class="about-copy"><span class="eyebrow">A TASTE OF SOMETHING GOOD</span><h2>We bring people<br>together with <em>food.</em></h2><p>Food Go is your friendly neighborhood food delivery experience. We bring together the dishes you love, the flavors you crave, and the convenience your busy day needs.</p><p>Whether it’s a quick lunch, a cozy dinner, or a late-night treat, there’s always something delicious waiting for you.</p><a class="btn btn-primary" href="#menu">Discover our menu ↗</a></div></div></section>
+
+    <section class="section-wrap contact-section" id="contact"><div class="contact-copy"><span class="eyebrow">WE’RE HERE FOR YOU</span><h2>Let’s talk <em>food.</em></h2><p>Questions, feedback, or just want to say hello? Send us a message and our friendly team will get back to you.</p><div class="contact-detail"><span>✉</span><div><small>Email us</small><strong>hello@foodgo.example</strong></div></div><div class="contact-detail"><span>☎</span><div><small>Call support</small><strong>+91 98765 43210</strong></div></div></div><form class="contact-form" id="contactForm"><h3>Send us a message</h3><label>Your name<input required name="name" placeholder="Enter your name"></label><label>Email address<input required type="email" name="email" placeholder="you@example.com"></label><label>Your message<textarea required name="message" rows="4" placeholder="How can we help?"></textarea></label><button class="btn btn-primary" type="submit">Send message ↗</button><p class="form-message" id="contactMessage"></p></form></section>
+  </main>
+
+  <footer class="site-footer"><div class="section-wrap footer-top"><div class="footer-brand"><a class="logo" href="#home"><span class="logo-mark">F</span> food<span>go</span></a><p>Good food, good mood.<br>Your cravings, delivered.</p><div class="socials"><a href="#contact" aria-label="Instagram">◎</a><a href="#contact" aria-label="Facebook">f</a><a href="#contact" aria-label="X social network">𝕏</a></div></div><div><h4>Explore</h4><a href="#home">Home</a><a href="#menu">Our menu</a><a href="#services">Services</a><a href="#about">About us</a></div><div><h4>Help & support</h4><a href="#contact">Contact us</a><button class="footer-link" data-page="tracking">Track order</button><button class="footer-link" data-page="login">My account</button></div><div><h4>Get in touch</h4><p>hello@foodgo.example</p><p>+91 98765 43210</p><p>Surat, Gujarat, India</p></div></div><div class="footer-bottom section-wrap"><span>© <span id="year"></span> Food Go. All rights reserved.</span><span>Made with <b>♥</b> for food lovers.</span></div></footer>
+
+  <div class="overlay hidden" id="cartOverlay"><aside class="cart-drawer"><div class="drawer-head"><div><span class="eyebrow">YOUR ORDER</span><h2>Your cart <span id="drawerCount">(0)</span></h2></div><button class="icon-button" id="cartClose" aria-label="Close cart">✕</button></div><div id="cartItems" class="cart-items"></div><div class="cart-summary"><div><span>Subtotal</span><strong id="cartSubtotal">₹0</strong></div><div><span>Delivery fee</span><strong id="deliveryFee">₹0</strong></div><div class="total-line"><span>Total</span><strong id="cartTotal">₹0</strong></div><button class="btn btn-primary full-width" id="checkoutButton">Proceed to checkout ↗</button><small>Demo checkout • no real payment will be taken</small></div></aside></div>
+
+  <div class="page-overlay hidden" id="pageOverlay"><section class="page-modal"><button class="icon-button modal-close" id="pageClose" aria-label="Close page">✕</button><div id="pageContent"></div></section></div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
